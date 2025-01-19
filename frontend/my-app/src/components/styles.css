@@ -1,0 +1,158 @@
+/* Body background */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #333;
+}
+
+/* Main container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Headers */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32; /* Deep green for a nature theme */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+/* Table styles */
+.reserves-table,
+.species-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f7fff7; /* Soft green for a natural feel */
+}
+
+/* Table headers */
+.reserves-table th,
+.species-table th {
+  background: linear-gradient(135deg, #388e3c, #81c784); /* Green gradient */
+  color: #ffffff;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* Table rows */
+.reserves-table td,
+.species-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dcedc8;
+  color: #333;
+}
+
+.reserves-table tr:hover,
+.species-table tr:hover {
+  background-color: rgba(56, 142, 60, 0.1); /* Subtle green hover effect */
+}
+
+/* Buttons */
+.actions button,
+.button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.actions button:first-child,
+.button.edit {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.actions button:first-child:hover,
+.button.edit:hover {
+  background-color: #388e3c;
+}
+
+.actions button:last-child,
+.button.delete {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.actions button:last-child:hover,
+.button.delete:hover {
+  background-color: #c62828;
+}
+
+/* Pagination buttons */
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 14px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #388e3c;
+}
+
+.pagination button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* Card enhancements */
+.card {
+  padding: 20px;
+  margin: 15px 0;
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .reserves-table th,
+  .species-table th,
+  .reserves-table td,
+  .species-table td {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .button {
+      padding: 8px 10px;
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,139 @@
+/* CreateUser.css */
+
+.create-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #6bd3c9, #82eaa1);
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.create-user-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  animation: fadeInUp 1s ease-out;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+input:focus {
+  border: 1px solid #6bd3c9;
+  box-shadow: 0 0 8px rgba(107, 211, 201, 0.5);
+  outline: none;
+}
+
+button {
+  background-color: #6bd3c9;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #5bc1b4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Background Elements */
+.leaf {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://example.com/leaf.png'); /* Replace with your transparent leaf image */
+  background-size: cover;
+  animation: float 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.leaf:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.leaf:nth-child(2) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 3s;
+  animation-duration: 14s;
+}
+
+.leaf:nth-child(3) {
+  top: 70%;
+  left: 25%;
+  animation-delay: 5s;
+  animation-duration: 10s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100px) rotate(90deg);
+    opacity: 0.5;
+  }
+}

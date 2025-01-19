@@ -1,0 +1,121 @@
+/* welcome.css */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #6bd3c9, #82eaa1);
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+.box-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3rem; /* Increased padding for larger content area */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 250px; /* Increased width */
+  height: 200px; /* Increased height */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.box h2 {
+  font-size: 1.8rem; /* Adjusted font size for larger box */
+  margin-bottom: 0.7rem;
+  color: #333;
+}
+
+.box p {
+  font-size: 1rem; /* Adjusted font size for better proportion */
+  color: #555;
+}
+
+.box:hover h2,
+.box:hover p {
+  color: #1a8f72;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Background Elements */
+.leaf {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://example.com/leaf.png'); /* Replace with a transparent leaf image */
+  background-size: cover;
+  animation: float 10s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.leaf:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.leaf:nth-child(2) {
+  top: 40%;
+  left: 50%;
+  animation-delay: 3s;
+  animation-duration: 15s;
+}
+
+.leaf:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 8s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100px) rotate(90deg);
+    opacity: 0.5;
+  }
+}
